@@ -82,5 +82,20 @@
         android:layout_marginTop="200dp"
         android:layout_marginLeft="160dp" />
 
+    <Button
+        android:text="mph"
+        android:id="@+id/mph"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:layout_marginLeft="70dp" />
+    
+    <Button
+        android:text="ft/s"
+        android:id="@+id/ftpsec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:layout_marginLeft="160dp" />
 
 </FrameLayout>
