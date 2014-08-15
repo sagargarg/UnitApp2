@@ -83,8 +83,8 @@
         android:layout_marginLeft="160dp" />
 
     <Button
-        android:text="mph"
-        android:id="@+id/mph"
+        android:text="m/s"
+        android:id="@+id/mpsec"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="200dp"
