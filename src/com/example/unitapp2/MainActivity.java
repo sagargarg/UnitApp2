@@ -32,7 +32,20 @@ public class MainActivity extends Activity {
         spd = (TextView) findViewById(R.id.number);
         unit = (TextView) findViewById(R.id.unit);
         
-        
+        View.OnClickListener mphListener = new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				unit.setText("mph");
+				if (!isMph) {
+					speed = Integer.parseInt((String) spd.getText());
+					speed = (int) Math.round(speed * 0.681818);
+					spd.setText(Integer.toString(speed));
+					isMph = true;
+				}
+			}
+    	};
+    	mphShow.setOnClickListener(mphListener);
         
         
         
