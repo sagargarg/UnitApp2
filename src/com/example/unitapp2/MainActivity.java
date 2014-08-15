@@ -58,6 +58,22 @@ public class MainActivity extends Activity {
     	};
     	fpsShow.setOnClickListener(fpsListener);
       
+    	View.OnClickListener kmphListener = new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// Here we have to start the game.
+				unit.setText("kmph");
+				if (isMph) {
+					speed = Integer.parseInt((String) spd.getText());
+					speed = (int) Math.round(speed * 5);
+					spd.setText(Integer.toString(speed));
+					isMph = false;
+				}
+			}
+    	};
+    	fpsShow.setOnClickListener(kmphListener);
+    	
     }
 
 
