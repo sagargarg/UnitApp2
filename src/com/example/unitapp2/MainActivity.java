@@ -47,16 +47,22 @@ public class MainActivity extends Activity {
     	};
     	mphShow.setOnClickListener(mphListener);
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+    	View.OnClickListener fpsListener = new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// Here we have to start the game.
+				unit.setText("ft/sec");
+				if (isMph) {
+					speed = Integer.parseInt((String) spd.getText());
+					speed = (int) Math.round(speed * 1.4666);
+					spd.setText(Integer.toString(speed));
+					isMph = false;
+				}
+			}
+    	};
+    	fpsShow.setOnClickListener(fpsListener);
+      
     }
 
 
