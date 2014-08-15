@@ -27,6 +27,23 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mphShow = (Button) findViewById(R.id.mph);
+        fpsShow = (Button) findViewById(R.id.ftpsec);
+        spd = (TextView) findViewById(R.id.number);
+        unit = (TextView) findViewById(R.id.unit);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     }
 
 
