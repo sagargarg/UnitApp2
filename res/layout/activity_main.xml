@@ -75,8 +75,8 @@
         android:layout_marginLeft="70dp" />
 	
     <Button
-        android:text="ft/s"
-        android:id="@+id/ftpsec"
+        android:text="kmph"
+        android:id="@+id/kmph"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="200dp"
