@@ -16,6 +16,13 @@ import android.widget.TextView;
 
 public class MainActivity extends Activity {
 
+	public static boolean isMph = true;
+	public static Button mphShow;
+	public static Button fpsShow;
+	public static int speed;
+	public static TextView spd;
+	public static TextView unit;
+	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
