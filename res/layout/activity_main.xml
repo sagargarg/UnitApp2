@@ -1,16 +1,100 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/FrameLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#444"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.unitapp2.MainActivity" >
 
-    <TextView
+    <Space
+        android:id="@+id/Space1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Space
+        android:id="@+id/Space2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Space
+        android:id="@+id/Space3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+  	<TextView
+  	    android:text="Unit App"
+        android:id="@+id/title"
+        android:layout_width="287dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="#fff"
+        android:textSize="25sp" />
+    
+  	<TextView
+        android:text="Based on the speed at which you are going, change the units to something different"
+        android:id="@+id/overview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:textColor="#fff"
+        android:textSize="20sp" />
+  	
+  	<TextView
+        android:text="17"
+        android:id="@+id/number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:layout_marginTop="130dp"
+        android:layout_marginLeft="10dp"
+        android:textColor="#fff"
+        android:textSize="30sp" />
+  	
+    <TextView
+        android:text="mph"
+        android:id="@+id/unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_marginTop="130dp"
+        android:layout_marginLeft="60dp"
+        android:textColor="#fff"
+        android:textSize="30sp" />
+    
+    <Button
+        android:text="mph"
+        android:id="@+id/mph"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="130dp"
+        android:layout_marginLeft="150dp" />
+	
+    <Button
+        android:text="ft/s"
+        android:id="@+id/ftpsec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="130dp"
+        android:layout_marginLeft="225dp" />
 
-</RelativeLayout>
+    <ExpandableListView
+        android:id="@+id/time"
+        android:layout_width="145dp"
+        android:layout_height="260dp"
+        android:layout_gravity="right"
+        android:layout_marginTop="180dp" >
+    </ExpandableListView>
+
+    <ExpandableListView
+        android:id="@+id/distance"
+        android:layout_width="145dp"
+        android:layout_height="260dp"
+        android:layout_marginTop="180dp" >
+    </ExpandableListView>
+    
+</FrameLayout>
