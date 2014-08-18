@@ -14,7 +14,10 @@ public class MainActivity extends Activity {
 	public static boolean isMph = true;
 	public static Button mphShow;
 	public static Button fpsShow;
+	public static Button kmphShow;
+	public static Button mpsShow;
 	public static int speed;
+	public static int mph = 17;
 	public static TextView spd;
 	public static TextView unit;
 	
@@ -24,6 +27,8 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         mphShow = (Button) findViewById(R.id.mph);
         fpsShow = (Button) findViewById(R.id.ftpsec);
+        kmphShow = (Button) findViewById(R.id.kmph);
+        mpsShow = (Button) findViewById(R.id.mpsec);
         spd = (TextView) findViewById(R.id.number);
         unit = (TextView) findViewById(R.id.unit);
         
@@ -32,12 +37,8 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				unit.setText("mph");
-				if (!isMph) {
-					speed = Integer.parseInt((String) spd.getText());
-					speed = (int) Math.round(speed * 0.681818);
-					spd.setText(Integer.toString(speed));
-					isMph = true;
-				}
+				speed = mph;
+				isMph = true;
 			}
     	};
     	mphShow.setOnClickListener(mphListener);
@@ -48,12 +49,10 @@ public class MainActivity extends Activity {
 			public void onClick(View v) {
 				// Here we have to start the game.
 				unit.setText("ft/sec");
-				if (isMph) {
-					speed = Integer.parseInt((String) spd.getText());
-					speed = (int) Math.round(speed * 1.4666);
-					spd.setText(Integer.toString(speed));
-					isMph = false;
-				}
+				speed = (int) Math.round(mph * 1.4666);
+				spd.setText(Integer.toString(speed));
+				isMph = false;
+				
 			}
     	};
     	fpsShow.setOnClickListener(fpsListener);
@@ -63,16 +62,28 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				// Here we have to start the game.
-				unit.setText("kmph");
-				if (isMph) {
-					speed = Integer.parseInt((String) spd.getText());
-					speed = (int) Math.round(speed * 5);
-					spd.setText(Integer.toString(speed));
-					isMph = false;
-				}
+				unit.setText("km/h");
+				speed = (int) Math.round(mph * 5);
+				spd.setText(Integer.toString(speed));
+				isMph = false;
 			}
     	};
-    	fpsShow.setOnClickListener(kmphListener);
+    	kmphShow.setOnClickListener(kmphListener);
+    	
+    	View.OnClickListener mpsListener = new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// Here we have to start the game.
+				unit.setText("m/sec");
+				speed = (int) Math.round(mph / 3600.00);
+				spd.setText(Integer.toString(speed));
+				isMph = false;
+			}
+    	};
+    	mpsShow.setOnClickListener(kmphListener);
+    	
+    	
     	
     }
 
