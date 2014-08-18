@@ -81,7 +81,7 @@ public class MainActivity extends Activity {
 				isMph = false;
 			}
     	};
-    	mpsShow.setOnClickListener(kmphListener);
+    	mpsShow.setOnClickListener(mpsListener);
     	
     	
     	
