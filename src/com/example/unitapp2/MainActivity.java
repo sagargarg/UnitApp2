@@ -38,6 +38,7 @@ public class MainActivity extends Activity {
 			public void onClick(View v) {
 				unit.setText("mph");
 				speed = mph;
+				spd.setText(Integer.toString(speed));
 				isMph = true;
 			}
     	};
