@@ -20,8 +20,8 @@ public class MainActivity extends Activity {
 	public static Button kmphShow;
 	public static Button mpsShow;
 	public static EditText text;
-	public static int speed;
-	public static int mph = 17;
+	public static int speed = 0;
+	public static int mph = 0;
 	public static TextView spd;
 	public static TextView unit;
 	
@@ -35,16 +35,14 @@ public class MainActivity extends Activity {
         mpsShow = (Button) findViewById(R.id.mpsec);
         unit = (TextView) findViewById(R.id.unit);
         text = (EditText) findViewById(R.id.inputnumber);
-        speed = Integer.parseInt(text.getText().toString());
         
         text.setOnEditorActionListener(new OnEditorActionListener() {
 
 			@Override
 			public boolean onEditorAction(TextView arg0, int arg1, KeyEvent arg2) {
-				int num = Integer.parseInt(text.getText().toString());
-				String cs = (String) unit.getText();
+				String cs = (String) arg0.getText();
 				if (cs == "mph") {
-					mph = num;
+					mph = Integer.parseInt(cs);
 				}
 				else if (cs == "ft/sec") {
 					mph = (int) Math.round(Integer.parseInt(cs) * 0.681818);
@@ -65,7 +63,7 @@ public class MainActivity extends Activity {
 			public void onClick(View v) {
 				unit.setText("mph");
 				speed = mph;
-				spd.setText(Integer.toString(speed));
+				text.setText(Integer.toString(speed));
 				isMph = true;
 			}
     	};
@@ -78,7 +76,7 @@ public class MainActivity extends Activity {
 				// Here we have to start the game.
 				unit.setText("ft/sec");
 				speed = (int) Math.round(mph * 1.4666);
-				spd.setText(Integer.toString(speed));
+				text.setText(Integer.toString(speed));
 				isMph = false;
 				
 			}
@@ -92,7 +90,7 @@ public class MainActivity extends Activity {
 				// Here we have to start the game.
 				unit.setText("km/h");
 				speed = (int) Math.round(mph * 5);
-				spd.setText(Integer.toString(speed));
+				text.setText(Integer.toString(speed));
 				isMph = false;
 			}
     	};
@@ -104,8 +102,8 @@ public class MainActivity extends Activity {
 			public void onClick(View v) {
 				// Here we have to start the game.
 				unit.setText("m/sec");
-				speed = (int) Math.round(mph / 3600.00);
-				spd.setText(Integer.toString(speed));
+				speed = (int) Math.round(mph * (1.0 / 3600.00));
+				text.setText(Integer.toString(speed));
 				isMph = false;
 			}
     	};
