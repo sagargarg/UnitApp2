@@ -45,7 +45,7 @@
         android:textColor="#fff"
         android:textSize="20sp" />
   	
-  	<TextView
+  	<!--  <EditText
         android:text="17"
         android:id="@+id/number"
         android:layout_width="wrap_content"
@@ -53,7 +53,21 @@
         android:layout_marginTop="130dp"
         android:layout_marginLeft="90dp"
         android:textColor="#fff"
-        android:textSize="30sp" />
+        android:textSize="30sp" />-->
+  	
+  	<EditText
+        android:id="@+id/number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="125dp"
+        android:layout_marginLeft="80dp"
+        android:textColor="#fff"
+        android:textSize="30sp"
+        android:ems="2" >
+
+        <requestFocus />
+    </EditText>
+  	
   	
     <TextView
         android:text="mph"
@@ -62,7 +76,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_marginTop="130dp"
-        android:layout_marginLeft="140dp"
+        android:layout_marginLeft="160dp"
         android:textColor="#fff"
         android:textSize="30sp" />
     
@@ -97,5 +111,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="270dp"
         android:layout_marginLeft="160dp" />
+
 
 </FrameLayout>
