@@ -34,7 +34,7 @@ public class MainActivity extends Activity {
         kmphShow = (Button) findViewById(R.id.kmph);
         mpsShow = (Button) findViewById(R.id.mpsec);
         unit = (TextView) findViewById(R.id.unit);
-        text = (EditText) findViewById(R.id.number);
+        text = (EditText) findViewById(R.id.inputnumber);
         speed = Integer.parseInt(text.getText().toString());
         
         text.setOnEditorActionListener(new OnEditorActionListener() {

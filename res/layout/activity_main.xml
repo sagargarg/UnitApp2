@@ -56,12 +56,14 @@
         android:textSize="30sp" />-->
   	
   	<EditText
-  	    android:id="@+id/number"
+  	    android:id="@+id/inputnumber"
   	    android:layout_width="wrap_content"
   	    android:layout_height="wrap_content"
-  	    android:layout_marginLeft="80dp"
+  	    android:layout_gravity="center_horizontal"
+  	    android:layout_marginLeft="-40dp"
   	    android:layout_marginTop="125dp"
   	    android:ems="2"
+  	    android:text="0"
   	    android:textColor="#fff"
   	    android:textSize="30sp" >
 
@@ -75,42 +77,47 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="130dp"
-        android:layout_marginLeft="160dp"
+        android:layout_marginLeft="40dp"
         android:textColor="#fff"
         android:textSize="30sp" />
     
     <Button
         android:text="mph"
         android:id="@+id/mph"
+        android:layout_gravity="center_horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="200dp"
-        android:layout_marginLeft="70dp" />
+        android:layout_marginLeft="-50dp" />
 	
     <Button
         android:text="kmph"
         android:id="@+id/kmph"
+        android:layout_gravity="center_horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="200dp"
-        android:layout_marginLeft="160dp" />
+        android:layout_marginLeft="50dp" />
 
     <Button
         android:text="m/s"
         android:id="@+id/mpsec"
+        android:layout_gravity="center_horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="270dp"
-        android:layout_marginLeft="70dp" />
+        android:layout_marginLeft="-50dp" />
     
     <Button
         android:text="ft/s"
         android:id="@+id/ftpsec"
+        android:layout_gravity="center_horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="270dp"
-        android:layout_marginLeft="160dp" />
+        android:layout_marginLeft="50dp" />
 
 
 </FrameLayout>
