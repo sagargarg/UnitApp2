@@ -56,14 +56,14 @@
         android:textSize="30sp" />-->
   	
   	<EditText
-        android:id="@+id/number"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="125dp"
-        android:layout_marginLeft="80dp"
-        android:textColor="#fff"
-        android:textSize="30sp"
-        android:ems="2" >
+  	    android:id="@+id/number"
+  	    android:layout_width="wrap_content"
+  	    android:layout_height="wrap_content"
+  	    android:layout_marginLeft="80dp"
+  	    android:layout_marginTop="125dp"
+  	    android:ems="2"
+  	    android:textColor="#fff"
+  	    android:textSize="30sp" >
 
         <requestFocus />
     </EditText>
