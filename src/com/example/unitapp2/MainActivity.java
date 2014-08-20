@@ -34,33 +34,14 @@ public class MainActivity extends Activity {
         kmphShow = (Button) findViewById(R.id.kmph);
         mpsShow = (Button) findViewById(R.id.mpsec);
         unit = (TextView) findViewById(R.id.unit);
+        unit.setText("mph");
         text = (EditText) findViewById(R.id.inputnumber);
-        
-        text.setOnEditorActionListener(new OnEditorActionListener() {
-
-			@Override
-			public boolean onEditorAction(TextView arg0, int arg1, KeyEvent arg2) {
-				String cs = (String) arg0.getText();
-				if (cs == "mph") {
-					mph = Integer.parseInt(cs);
-				}
-				else if (cs == "ft/sec") {
-					mph = (int) Math.round(Integer.parseInt(cs) * 0.681818);
-				}
-				else if (cs == "km/h") {
-					mph = (int) Math.round(Integer.parseInt(cs) * 0.621371);
-				}
-				else {
-					mph = Integer.parseInt(cs) * 3600;
-				}
-				return true;
-			}
-        });
         
         View.OnClickListener mphListener = new View.OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
+				numberChange();
 				unit.setText("mph");
 				speed = mph;
 				text.setText(Integer.toString(speed));
@@ -74,6 +55,7 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				// Here we have to start the game.
+				numberChange();
 				unit.setText("ft/sec");
 				speed = (int) Math.round(mph * 1.4666);
 				text.setText(Integer.toString(speed));
@@ -88,8 +70,9 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				// Here we have to start the game.
+				numberChange();
 				unit.setText("km/h");
-				speed = (int) Math.round(mph * 5);
+				speed = (int) Math.round(mph * 1.60934);
 				text.setText(Integer.toString(speed));
 				isMph = false;
 			}
@@ -101,16 +84,31 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				// Here we have to start the game.
+				numberChange();
 				unit.setText("m/sec");
-				speed = (int) Math.round(mph * (1.0 / 3600.00));
+				speed = (int) Math.round(mph * 0.44704);
 				text.setText(Integer.toString(speed));
 				isMph = false;
 			}
     	};
     	mpsShow.setOnClickListener(mpsListener);
-    	
-    	
-    	
+    }
+    
+    public void numberChange() {
+    	String cs = unit.getText().toString();
+    	String s = text.getText().toString();
+		if (cs.equals("mph")) {
+			mph = Integer.parseInt(s);
+		}
+		else if (cs.equals("ft/sec")) {
+			mph = (int) Math.round(Integer.parseInt(s) * 0.681818);
+		}
+		else if (cs.equals("km/h")) {
+			mph = (int) Math.round(Integer.parseInt(s) * 0.621371);
+		}
+		else {
+			mph = (int) Math.round(Integer.parseInt(s) * 2.23694);
+		}
     }
 
 
